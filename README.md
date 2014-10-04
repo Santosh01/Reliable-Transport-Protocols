@@ -71,7 +71,6 @@ Experiment 2: 
 With window sizes – {10, 50, 100, 200, 500} for GBN and SR, compare the 3 protocols’
 throughputs at the application layer of receiver B. Use 3 loss probabilities – {0.2, 0.5, 0.8} for all 3
 protocols.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *********************************************************
 
@@ -99,7 +98,7 @@ int B_seqnum = 0;			/* next expected seqnum */
 
 Part 2: defines for gbn protocol(gbn.c):
 ----------------------------------------
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //variables for sender
 	#define TIMEOUT 20.0		/* timeout */
 	#define N 10				/* window size, may be 10 or 50 */
@@ -110,7 +109,7 @@ struct pkt packets[N];		/* buffer for packets, current buffer size equals to win
 
 //variables for receiver
 int B_seqnum = 0;			/* next expected seqnum */
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 

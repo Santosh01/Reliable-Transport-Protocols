@@ -98,6 +98,7 @@ int B_seqnum = 0;			/* next expected seqnum */
 
 Part 2: defines for gbn protocol(gbn.c):
 ----------------------------------------
+
 //variables for sender
 	#define TIMEOUT 20.0		/* timeout */
 	#define N 10				/* window size, may be 10 or 50 */
