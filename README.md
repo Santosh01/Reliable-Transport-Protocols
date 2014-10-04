@@ -82,7 +82,6 @@ protocols.
 Part 1: defines for abt protocol(abt.c):
 ----------------------------------------
 //variables for sender
-~~~~~~~~~~~~~~~~~~~~~~
 /* Why we choose 20.0 time units as our time out?
    Because each packet's arrival time is between 1 and 10 time units,
    If we could not receive a ACK after 20 time units, the packet 
