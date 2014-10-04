@@ -1,10 +1,7 @@
-Reliable-Transport-Protocols
-============================
-
   ++++++++++++++++++++++++++++++++++++++++++++++++++
-  +         RELIABLE TRANSPORT PROTOCOLS           +
+  +     RELIABLE TRANSPORT PROTOCOLS               +
   +	    	Date: 04-April-2014                +
-  ++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++   
 
 
 
@@ -28,7 +25,7 @@ type a simple command "make" as below,
 $ make
 The will create a binary executable of all C code files.
 
-Now run each protocols individually
+Now run each protocols individually	 
 
 $ ./abt
 
