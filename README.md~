@@ -87,7 +87,7 @@ Part 1: defines for abt protocol(abt.c):
    Because each packet's arrival time is between 1 and 10 time units,
    If we could not receive a ACK after 20 time units, the packet 
    MUST have been lost, so we could resend it */
-#define TIMEOUT 20.0		/* timeout */
+ #define TIMEOUT 20.0		/* timeout */
 int A_seqnum = 0;			/* next seqnum for sender */
 enum sender_flag A_flag = WAIT_FOR_PKG;	/* current stage of sender */
 struct pkt cur_packet;		/* buffer for packets, we only need buffer one packet for abt protocol */
@@ -99,8 +99,8 @@ int B_seqnum = 0;			/* next expected seqnum */
 Part 2: defines for gbn protocol(gbn.c):
 ----------------------------------------
 //variables for sender
-#define TIMEOUT 20.0		/* timeout */
-#define N 10				/* window size, may be 10 or 50 */
+	#define TIMEOUT 20.0		/* timeout */
+	#define N 10				/* window size, may be 10 or 50 */
 int base = 0;				/* the oldest not ACKed packet seqnum */
 int nextseq = 0;			/* next seqnum for sender */
 int packets_base = 0;		/* buffer start index */
@@ -114,21 +114,21 @@ int B_seqnum = 0;			/* next expected seqnum */
 
 Part 3: defines for sr protocol(sr.c):
 ----------------------------------------
-float g_cur_time = 0.0;		/* current time, when every timeout occur, add INTERVAL	*/
-#define INTERVAL 1.0		/* timer timeout, because we need multiple timers for Selective-Repeat
+	float g_cur_time = 0.0;		/* current time, when every timeout occur, add INTERVAL	*/
+	#define INTERVAL 1.0		/* timer timeout, because we need multiple timers for Selective-Repeat
 							   protocol and there is only one hardware timer, we must implement
 							   our own's logic timer. As a result, we set the timer timeout after 
 							   every INTERVAL time. Then compare current time with the packet's
-							   send time to make sure whether we need to resend or not			*/
-#define TIMEOUT 20.0		/* timeout for each packet */
-#define N 10				/* window size, maybe 10 or 50 */
-struct ring_buf {			/* buffer for sender and receive */
-  /* For receiver	0: acceptable, 1:data received.
-     For sender		0: acceptable, 1:data sended, 2:ACK received */
-  int flag;
-  struct pkt packet;
-  float timeout;	/* packet send time */
-};
+							   send time to make sure whether we need to resend or not*/
+	#define TIMEOUT 20.0		/* timeout for each packet */
+	#define N 10				/* window size, maybe 10 or 50 */
+	struct ring_buf {			/* buffer for sender and receive */
+	  /* For receiver	0: acceptable, 1:data received.
+	     For sender		0: acceptable, 1:data sended, 2:ACK received */
+	     int flag;
+  	     struct pkt packet;
+	     float timeout;	/* packet send time */
+	};
 
 /* defines for sender */
 int A_base = 0;				/* the oldest not ACKed packet seqnum */
