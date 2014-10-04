@@ -1,24 +1,18 @@
 Reliable-Transport-Protocols
 ============================
 
-  ++++++++++++++++++++++++++++++++++++++++++++++++++
-  +         RELIABLE TRANSPORT PROTOCOLS           +
-  +	    	Date: 04-April-2014                +
-  ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+	CONTENTS OF THIS FILE :
+	=======================
+  	1. Compilation of Program
+  	2. Validation of protocols
+  	3. Performance comparison
+  	4. The Important Variables Define
+		a) Part 1 : defines for abt protocol(abt.c)
+		b) Part 2 : defines for abt protocol(gbn.c)
+		c) Part 3 : defines for abt protocol(sr.c)
 
-****************************************************************
-*	CONTENTS OF THIS FILE :                                *
-*	=======================                                *
-*  	1. Compilation of Program                              *
-*  	2. Validation of protocols                             *
-*  	3. Performance comparison                              *
-*  	4. The Important Variables Define                      *
-*		a) Part 1 : defines for abt protocol(abt.c)    *
-*		b) Part 2 : defines for abt protocol(gbn.c)    *
-*		c) Part 3 : defines for abt protocol(sr.c)     *
-****************************************************************
 
 
 1. How to compile the program ?
@@ -40,12 +34,10 @@ Above command will run all protocols.
 
 $ make clean 
 
-This will remove all the object file from the directory
+This will remove all the object file from the directory.
 
 
 *********************************************************
-*********************************************************
-
 
 2. Validation of protocols :
 ===========================
@@ -58,7 +50,6 @@ Alternating-Bit-Protocol and 50 in the case of the other two protocols. For the 
 the Selective-Repeat versions, set the window size to 10.
 
 *********************************************************
-*********************************************************
 
 
 3. Performance comparison :
@@ -70,10 +61,10 @@ corruption probability of 0.2.
 
 Experiment 1: 
 ~~~~~~~~~~~~~
-
 With loss probabilities – {0.1, 0.2, 0.4, 0.6, 0.8}, compare the 3 protocols’ throughputs at the
 application layer of receiver B. Use 2 window sizes - {10, 50} for the Go-Back-N version and the
 Selective-Repeat Version.
+*********************************************************
 
 Experiment 2: 
 ~~~~~~~~~~~~~
@@ -82,17 +73,16 @@ throughputs at the application layer of receiver B. Use 3 loss probabilities –
 protocols.
 
 *********************************************************
-*********************************************************
-
 
 
 4. The Important Variables Define :
-***********************************
+===================================
 
 
 Part 1: defines for abt protocol(abt.c):
-========================================
+----------------------------------------
 //variables for sender
+~~~~~~~~~~~~~~~~~~~~~~
 /* Why we choose 20.0 time units as our time out?
    Because each packet's arrival time is between 1 and 10 time units,
    If we could not receive a ACK after 20 time units, the packet 
