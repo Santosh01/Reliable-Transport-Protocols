@@ -82,6 +82,7 @@ protocols.
 Part 1: defines for abt protocol(abt.c):
 ----------------------------------------
 //variables for sender
+~~~~~~~~~~~~~~~~~~~~~~
 /* Why we choose 20.0 time units as our time out?
    Because each packet's arrival time is between 1 and 10 time units,
    If we could not receive a ACK after 20 time units, the packet 
@@ -92,7 +93,7 @@ enum sender_flag A_flag = WAIT_FOR_PKG;	/* current stage of sender */
 struct pkt cur_packet;		/* buffer for packets, we only need buffer one packet for abt protocol */
 //variables for receiver
 int B_seqnum = 0;			/* next expected seqnum */
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Part 2: defines for gbn protocol(gbn.c):
@@ -109,6 +110,7 @@ struct pkt packets[N];		/* buffer for packets, current buffer size equals to win
 int B_seqnum = 0;			/* next expected seqnum */
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 Part 3: defines for sr protocol(sr.c):
 ----------------------------------------
