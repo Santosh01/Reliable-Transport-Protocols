@@ -61,10 +61,10 @@ corruption probability of 0.2.
 
 Experiment 1: 
 ~~~~~~~~~~~~~
-With loss probabilities – {0.1, 0.2, 0.4, 0.6, 0.8}, compare the 3 protocols’ throughputs at the
-application layer of receiver B. Use 2 window sizes - {10, 50} for the Go-Back-N version and the
-Selective-Repeat Version.
-*********************************************************
+With loss probabilities – {0.1, 0.2, 0.4, 0.6, 0.8}, compare the 3 protocols’ throughputs 
+at the application layer of receiver B. Use 2 window sizes - {10, 50} for the 
+Go-Back-N version and the Selective-Repeat Version.
+
 
 Experiment 2: 
 ~~~~~~~~~~~~~
@@ -97,7 +97,7 @@ int B_seqnum = 0;			/* next expected seqnum */
 
 
 Part 2: defines for gbn protocol(gbn.c):
-=========================================
+----------------------------------------
 //variables for sender
 #define TIMEOUT 20.0		/* timeout */
 #define N 10				/* window size, may be 10 or 50 */
@@ -112,7 +112,7 @@ int B_seqnum = 0;			/* next expected seqnum */
 
 
 Part 3: defines for sr protocol(sr.c):
-=======================================
+----------------------------------------
 float g_cur_time = 0.0;		/* current time, when every timeout occur, add INTERVAL	*/
 #define INTERVAL 1.0		/* timer timeout, because we need multiple timers for Selective-Repeat
 							   protocol and there is only one hardware timer, we must implement
@@ -143,7 +143,6 @@ int B_ring_start = 0;
 struct ring_buf B_buf[N];	/* buffer size equals to window size */
 
 
-*********************************************************************************************************************
 *********************************************************************************************************************
 
 Copyright(c) Spring-2014 University at Buffalo, All right reserved.
